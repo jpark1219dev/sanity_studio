@@ -11,6 +11,132 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    /* Your types here! */
+    {
+			name: 'page',
+			type: 'document',
+			title: 'Page',
+			fields: [
+				{
+					name: 'title',
+					type: 'string',
+					title: 'Title'
+				},
+				{
+					name: 'header',
+					type: 'string',
+					title: 'Header'
+				},
+				{
+          name: "section_one_image",
+          title: "Section One Image",
+					type: "image",
+					options: {
+						hotspot: true
+					},
+          fields: [
+            {
+              type: "text",
+              name: "alt",
+              title: "Description"
+            },
+          ],
+        },
+				{
+          name: "section_one_content",
+          title: "Section One Content",
+          type: "array",
+          of: [
+            {
+              type: "block",
+            },
+            {
+              type: "image",
+              fields: [
+								{
+									title: 'Position',
+									name: 'position',
+									type: 'string',
+									options: {
+										list: [
+											{title: 'Center', value: 'center'},
+											{title: 'Left', value: 'left'},
+											{title: 'Right', value: 'right'},
+										],
+										layout: 'radio',
+										isHighlighted: true
+									}
+								},
+                {
+                  type: "text",
+                  name: "alt",
+                  title: "Description",
+                  options: {
+                    isHighlighted: true,
+                  },
+                },
+              ],
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+				},
+				{
+          name: "section_two_image",
+          title: "Section Two Image",
+					type: "image",
+					options: {
+						hotspot: true
+					},
+          fields: [
+            {
+              type: "text",
+              name: "alt",
+              title: "Description"
+            },
+          ],
+        },
+				{
+          name: "section_two_content",
+          title: "Section Two Content",
+          type: "array",
+          of: [
+            {
+              type: "block",
+            },
+            {
+              type: "image",
+              fields: [
+								{
+									title: 'Position',
+									name: 'position',
+									type: 'string',
+									options: {
+										list: [
+											{title: 'Center', value: 'center'},
+											{title: 'Left', value: 'left'},
+											{title: 'Right', value: 'right'},
+										],
+										layout: 'radio',
+										isHighlighted: true
+									}
+								},
+                {
+                  type: "text",
+                  name: "alt",
+                  title: "Description",
+                  options: {
+                    isHighlighted: true,
+                  },
+                },
+              ],
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+				},
+			]
+		}
   ])
 })
