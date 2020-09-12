@@ -136,6 +136,171 @@ export default createSchema({
             },
           ],
 				},
+				{
+          name: "section_three_image",
+          title: "Section Three Image",
+					type: "image",
+					options: {
+						hotspot: true
+					},
+          fields: [
+            {
+              type: "text",
+              name: "alt",
+              title: "Description"
+            },
+          ],
+        },
+				{
+          name: "section_three_content",
+          title: "Section Three Content",
+          type: "array",
+          of: [
+            {
+              type: "block",
+            },
+            {
+              type: "image",
+              fields: [
+								{
+									title: 'Position',
+									name: 'position',
+									type: 'string',
+									options: {
+										list: [
+											{title: 'Center', value: 'center'},
+											{title: 'Left', value: 'left'},
+											{title: 'Right', value: 'right'},
+										],
+										layout: 'radio',
+										isHighlighted: true
+									}
+								},
+                {
+                  type: "text",
+                  name: "alt",
+                  title: "Description",
+                  options: {
+                    isHighlighted: true,
+                  },
+                },
+              ],
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+				},
+				{
+          name: "section_four_image",
+          title: "Section Four Image",
+					type: "image",
+					options: {
+						hotspot: true
+					},
+          fields: [
+            {
+              type: "text",
+              name: "alt",
+              title: "Description"
+            },
+          ],
+        },
+				{
+          name: "section_four_content",
+          title: "Section Four Content",
+          type: "array",
+          of: [
+            {
+              type: "block",
+            },
+            {
+              type: "image",
+              fields: [
+								{
+									title: 'Position',
+									name: 'position',
+									type: 'string',
+									options: {
+										list: [
+											{title: 'Center', value: 'center'},
+											{title: 'Left', value: 'left'},
+											{title: 'Right', value: 'right'},
+										],
+										layout: 'radio',
+										isHighlighted: true
+									}
+								},
+                {
+                  type: "text",
+                  name: "alt",
+                  title: "Description",
+                  options: {
+                    isHighlighted: true,
+                  },
+                },
+              ],
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+				},
+				{
+          name: "section_five_image",
+          title: "Section Five Image",
+					type: "image",
+					options: {
+						hotspot: true
+					},
+          fields: [
+            {
+              type: "text",
+              name: "alt",
+              title: "Description"
+            },
+          ],
+        },
+				{
+          name: "section_Five_content",
+          title: "Section Five Content",
+          type: "array",
+          of: [
+            {
+              type: "block",
+            },
+            {
+              type: "image",
+              fields: [
+								{
+									title: 'Position',
+									name: 'position',
+									type: 'string',
+									options: {
+										list: [
+											{title: 'Center', value: 'center'},
+											{title: 'Left', value: 'left'},
+											{title: 'Right', value: 'right'},
+										],
+										layout: 'radio',
+										isHighlighted: true
+									}
+								},
+                {
+                  type: "text",
+                  name: "alt",
+                  title: "Description",
+                  options: {
+                    isHighlighted: true,
+                  },
+                },
+              ],
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+				},
 			]
 		}
   ])
